@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #D9002E; 
+  color: #FFFFFF; 
+  padding: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  height: 40px; 
+  margin-right: 10px; 
+}
+header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li:not(:last-child) {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #FFFFFF; 
+  text-decoration: none;
+}
+
+.login-register-buttons {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.login-button,
+.register-button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover,
+.register-button:hover {
+  background-color: #333333;
+}
+
+.featured-books,
+.top-sellers {
+  padding: 20px;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book {
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.book img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: #D9002E; 
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+}

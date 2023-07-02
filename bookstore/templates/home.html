@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UGA Bookstore</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <style>
+    /* Add space between header and home button */
+    header {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="{% static 'images/bulldog.jpg' %}" alt="UGA Bulldog Logo">
+    <h1>UGA Bookstore</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">New Releases</a></li>
+        <li><a href="#">Best Sellers</a></li>
+        <li><a href="#">My Cart</a></li>
+        <li class="login-register-buttons">
+          {% if user.is_authenticated %}
+            <div class="welcome-message">
+              <h3>Welcome {{ user.username }}!</h3>
+              <a href="{% url 'logout' %}">Logout?</a>
+            </div>
+          {% else %}
+            <div class="register-button"><a href="{% url 'register' %}">Register</a></div>
+            <div class="login-button"><a href="{% url 'login' %}">Login</a></div>
+          {% endif %}
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="featured-books">
+    <h2>Featured Books</h2>
+    <div class="book-list">
+      <!-- Sample Book 1 -->
+      <div class="book">
+        <img src="{% static 'images/book1.jpg' %}" alt="Book 1">
+        <h3>Harry Potter And The Sorcerer's Stone</h3>
+        <p>Author: J.K Rowling</p>
+        <p>Price: $9.99</p>
+        <a href="book_details.html">View Details</a>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- Sample Book 2 -->
+      <div class="book">
+        <img src="{% static 'images/book2.jpg' %}" alt="Book 2">
+        <h3>The Immortals Of Meluha</h3>
+        <p>Author: Amish Tripati</p>
+        <p>Price: $12.99</p>
+        <a href="book_details.html">View Details</a>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- Sample Book 3 -->
+      <div class="book">
+        <img src="{% static 'images/book3.jpg' %}" alt="Book 3">
+        <h3>Steve Jobs</h3>
+        <p>Author: Walter Isaacson</p>
+        <p>Price: $14.99</p>
+        <a href="book_details.html">View Details</a>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- Sample Book 4 -->
+      <div class="book">
+        <img src="{% static 'images/book4.jpg' %}" alt="Book 4">
+        <h3>Adventures Of Tintin</h3>
+        <p>Author: Andy Serkis</p>
+        <p>Price: $10.99</p>
+        <a href="book_details.html">View Details</a>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- Sample Book 5 -->
+      <div class="book">
+        <img src="{% static 'images/book5.jpg' %}" alt="Book 5">
+        <h3>Percy Jackson And The Lightning Thief</h3>
+        <p>Author: Rick Riordan</p>
+        <p>Price: $11.99</p>
+        <a href="book_details.html">View Details</a>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- Sample Book 6 -->
+      <div class="book">
+        <img src="{% static 'images/book6.jpg' %}" alt="Book 6">
+        <h3>Friday Night Lights</h3>
+        <p>Author: H.G BISSINGER</p>
+        <p>Price: $8.99</p>
+        <a href="book_details.html">View Details</a>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="top-sellers">
+    <h2>Top Sellers</h2>
+    <div class="book-list">
+      <!-- Sample Top Seller Book 1 -->
+      <div class="book">
+        <img src="{% static 'images/book7.jpg' %}" alt="Book 7">
+        <h3>The Murder Of Roger Ackroyd</h3>
+        <p>Author: Agatha Christie</p>
+        <p>Price: $6.99</p>
+        <a href="book_details.html">View Details</a>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- Sample Top Seller Book 2 -->
+      <div class="book">
+        <img src="{% static 'images/book8.jpg' %}" alt="Book 8">
+        <h3>The Alchemist</h3>
+        <p>Author: Paulo Coelho</p>
+        <p>Price: $5.99</p>
+        <a href="book_details.html">View Details</a>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- Sample Top Seller Book 3 -->
+      <div class="book">
+        <img src="{% static 'images/book9.jpg' %}" alt="Book 9">
+        <h3>Sapiens</h3>
+        <p>Author: Yuval Noah Harari</p>
+        <p>Price: $11.99</p>
+        <a href="book_details.html">View Details</a>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- Sample Top Seller Book 4 -->
+      <div class="book">
+        <img src="{% static 'images/book10.jpg' %}" alt="Book 10">
+        <h3>Noddy</h3>
+        <p>Author: Enid Blyton</p>
+        <p>Price: $9.99</p>
+        <a href="book_details.html">View Details</a>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
